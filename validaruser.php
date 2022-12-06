@@ -20,9 +20,11 @@ $array2 = mysqli_fetch_array($consulta2);
 
 if($array['verificar']>0){
     $_SESSION['nombre']= $array['nombre'];
+    $_SESSION['nombre']= $array[''];
     header("location:homealumno.php");
 }else{
     if($array2['verificar2']>0){
+        $_SESSION['nombre']= $array2['nombre'];
         $_SESSION['nombre']= $array2['nombre'];
         header("location:homemaestro.php");
     }else{

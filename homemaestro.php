@@ -25,7 +25,7 @@
 
             $query = "SELECT administrativos.nombre AS'nombre', administrativos.ape_Pat AS'Apellido Paterno', administrativos.ape_Mat AS 'Apellido Materno', materias.materia AS'Materia',
              edificio.edificio AS'Edificio', carreras.carrera AS'Carrera', administrativos.telefono AS'Telefono' FROM administrativos
-            INNER JOIN materias ON administrativos.id_materia = materias.id_materias INNER JOIN edificio ON administrativos.id_edificio = edificio.id_edificio INNER JOIN carreras ON administrativos.id_carrera = carreras.id_carrera";
+            INNER JOIN materias ON administrativos.id_materia = materias.id_materias INNER JOIN edificio ON administrativos.id_edificio = edificio.id_edificio INNER JOIN carreras ON administrativos.id_carrera = carreras.id_carrera" WHERE ;
             $resul = $conexion->query($query);
 
             while($row = $resul->fetch_assoc()){
